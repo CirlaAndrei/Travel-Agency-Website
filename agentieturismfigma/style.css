@@ -1,0 +1,1361 @@
+/*Common Styles*/
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    outline: none;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    
+}
+body{
+    width: 100%;
+    height: 100%;
+}
+html{
+    scroll-behavior: smooth;
+}
+img{
+    display: block;
+    max-width: 100%;
+}
+h1{
+    font-size: 4rem;
+    text-align: center;
+    font-family: "Poor Story", system-ui;
+    margin: 3rem;
+    filter: drop-shadow(2px 2px #fff);
+    text-shadow: 0 0 30px #000;
+}
+    
+h2{
+    font-size: 3rem;
+    font-family: "Poor Story", system-ui;
+    text-align: center;
+    padding-top: 2rem;
+    text-shadow: -1px 4px 4px #fff;
+}
+h3{
+    font-size: 2.25rem;
+    text-align: center;
+    font-family: "Poor Story", system-ui;
+    margin: 2rem auto;
+    color: #FFFFFF;
+    background-color: #1D192B;
+    padding: 1rem;
+    width: 37rem;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    text-shadow: -1px 4px 10px rgba(255, 255, 255, 50%);
+        
+}
+.haser1{
+    height: 0.3rem;
+    width: 100%;
+    background-color:#FFF
+} 
+.haser2{
+    height: 1.7rem;
+    width: 100%;
+    background-color:#FFF
+}    
+
+/*Sfarsit Common Styles*/
+    
+/*Header & Nav*/
+    
+.header{
+    background-image: url(imagini/Bg-Img-Header.png);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+       
+}
+    
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 7rem;
+    padding: 0 2rem;
+    background-color: #434637;
+    border-radius: 0.5%;
+    font-family: "Poppins", sans-serif;
+    position: relative;
+}
+.nav-items{
+    display: flex;
+    gap: 3rem;
+    transition: all .5s ease-in-out;
+}
+.nav-items li a{
+    font-size: 1.2em;
+    color: #fff;
+    transition: color 0.3s;
+}
+.nav-items li a:hover{
+    color: #ECD8EE;
+}
+
+.logo{
+    width: 5rem;
+    height: 5rem;
+}
+.header-btn{
+    font-family: "Poor Story", system-ui;
+    font-size: 2rem;
+    padding: 0.25em 0.7em;
+    border-radius: 0.313rem;
+    border: solid 1px;
+    background-color: #fff;
+    text-align: center;
+    text-shadow: 0px 0px 20px #000;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    
+}
+.header-btn:hover{
+    font-size: 2.1rem;
+    filter: drop-shadow(0px 0px 5px #fff);
+}
+#toggle {
+    display: none;
+}
+
+label {
+    font-size: 30px;
+    color: white;
+    display: none;
+    cursor: pointer;
+    margin-left: auto;
+}
+label img{
+    width: 1.3rem;
+    height: 1.3rem;
+    
+}
+
+/* Responsive Styles */
+
+@media (min-width: 501px) and (max-width: 768px) {
+    .nav {
+        padding: 0 1rem;
+    }
+    h1{
+        font-size: 2rem;
+    }
+    .nav-items {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 6rem;
+        right: 0;
+        width: 100%;
+        background-color: #434637;
+        text-align: center;
+        padding: 1rem 0;
+        animation: myAnim 1s ease-in 0s 1 normal forwards;
+        height: 29.85rem;
+        
+    }
+    @keyframes myAnim {
+	0% {
+		animation-timing-function: ease-in;
+		opacity: 0;
+		transform: translateY(-250px);
+	}
+
+	38% {
+		animation-timing-function: ease-out;
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+	55% {
+		animation-timing-function: ease-in;
+		transform: translateY(-65px);
+	}
+
+	72% {
+		animation-timing-function: ease-out;
+		transform: translateY(0);
+	}
+
+	81% {
+		animation-timing-function: ease-in;
+		transform: translateY(-28px);
+	}
+
+	90% {
+		animation-timing-function: ease-out;
+		transform: translateY(0);
+	}
+
+	95% {
+		animation-timing-function: ease-in;
+		transform: translateY(-8px);
+	}
+
+	100% {
+		animation-timing-function: ease-out;
+		transform: translateY(0);
+	}
+}
+    .nav-items li {
+        margin: 0.2rem 0;
+        border-bottom: 1px solid #1D192B;
+        border-top: 1px solid #1D192B;
+        padding: 1.5em;
+    }
+    .nav-items li a {
+        font-size: 1rem;
+    }
+
+    label {
+        display: block;
+    }
+    .header-btn{
+        font-size: 1.3rem;
+    }
+    .header-btn:hover{
+    font-size: 1.4rem;
+    filter: drop-shadow(0px 0px 5px #fff);
+    }
+
+    #toggle:checked ~ .nav-container .nav-items {
+        display: flex;
+        z-index: 1;
+    }
+    .logo{
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+    /* Show hamburger, hide close by default */
+    label:first-of-type {
+    display: block;
+    }
+    label:last-of-type {
+    display: none;
+    }
+    /* When menu is open */
+    #toggle:checked ~ label:first-of-type {
+    display: none;
+    }
+    #toggle:checked ~ label:last-of-type {
+    display: block;
+    }
+}
+
+        
+        
+    
+@media(min-width: 769px) and (max-width: 1023px){
+    h1{
+        font-size: 3rem;
+    }
+    .logo{
+        width: 4rem;
+        height: 4rem;
+    }
+    .nav-items li a{
+        font-size: 1em;
+    }
+    .header-btn{
+        font-size: 1.5rem;
+    }
+    .header-btn:hover{
+        font-size: 1.6rem;
+        filter: drop-shadow(0px 0px 5px #fff);
+        }
+
+    }
+
+    .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media(min-width: 320px) and (max-width: 500px){
+    .header-btn{
+        font-size: 1.1rem;
+    }
+    .header-btn:hover{
+    font-size: 1.1rem;
+    filter: drop-shadow(0px 0px 5px #fff);
+    }
+    h1{
+        font-size: 1.8rem;
+    }
+    .nav-items {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 6rem;
+        right: 0;
+        width: 100%;
+        background-color: #434637;
+        text-align: center;
+        padding: 1rem 0;
+        animation: myAnim 1s ease-in 0s 1 normal forwards;
+        height: 29.85rem;
+        
+    }
+    @keyframes myAnim {
+	0% {
+		animation-timing-function: ease-in;
+		opacity: 0;
+		transform: translateY(-250px);
+	}
+
+	38% {
+		animation-timing-function: ease-out;
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+	55% {
+		animation-timing-function: ease-in;
+		transform: translateY(-65px);
+	}
+
+	72% {
+		animation-timing-function: ease-out;
+		transform: translateY(0);
+	}
+
+	81% {
+		animation-timing-function: ease-in;
+		transform: translateY(-28px);
+	}
+
+	90% {
+		animation-timing-function: ease-out;
+		transform: translateY(0);
+	}
+
+	95% {
+		animation-timing-function: ease-in;
+		transform: translateY(-8px);
+	}
+
+	100% {
+		animation-timing-function: ease-out;
+		transform: translateY(0);
+	}
+}
+    .nav-items li {
+        margin: 0.2rem 0;
+        border-bottom: 1px solid #1D192B;
+        border-top: 1px solid #1D192B;
+        padding: 1.5em;
+    }
+    .nav-items li a {
+        font-size: 0.8em;
+    }
+
+    label {
+        display: block;
+        margin-right: -1.5rem;
+    }
+    #toggle:checked ~ .nav-container .nav-items {
+        display: flex;
+        z-index: 1;
+    }
+    label:first-of-type {
+    display: block;
+    }
+    label:last-of-type {
+    display: none;
+    }
+    /* When menu is open */
+    #toggle:checked ~ label:first-of-type {
+    display: none;
+    }
+    #toggle:checked ~ label:last-of-type {
+    display: block;
+    }
+    .logo{
+        width: 3.5rem;
+        height: 3.5rem;
+        margin-left: -1.3rem;
+    }
+
+}
+    /*Sfarsit Header & Nav*/
+    
+    
+    
+    /*Sectiune-About-Us*/
+    
+    .sectiune-about{
+        width: 100%;
+        height: 100vh;
+        background-image: radial-gradient(#262C4B 10%, #222843 20%, #1D253C 30%);
+        border: solid 3.5px #FFFFFF;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .h2-about-us{
+        font-size: 3rem;
+        font-family: "Poor Story", system-ui;
+        margin-bottom: 4rem;
+        padding: 0;
+        background: #FFFFFF;
+        text-shadow: 0px -1px 60px #000;
+        width: 20rem;
+        height: 6rem;
+        margin-top: -12.5rem;
+        border-radius: 13px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .about-btn{
+        font-family: "Poor Story", system-ui;
+        font-size: 2rem;
+        padding: 0.25em 0.7em;
+        border-radius: 0.313rem;
+        border: solid 1px;
+        background-color: #fff;
+        text-align: center;
+        text-shadow: 0px 0px 20px #000;
+        cursor: pointer;
+        transition: all .5s ease-in-out;
+        margin-bottom: 2rem;
+    }
+    .about-btn:hover{
+        font-size: 2.1rem;
+        filter: drop-shadow(0px 0px 5px #fff);
+    }
+    .flex-p{
+        display: flex;
+        justify-content: space-evenly; 
+        align-items: center;  
+    }
+    .items-p1{
+        margin: 3em 1em -12em 1em;
+        padding: 2em;
+        background-color: #fff;
+        border-radius: 5px;
+        border: dashed 1px #000;
+        font-family: "Poor Story", system-ui;
+        font-size: 1.125rem;
+        text-shadow: 0 0 70px #000;
+        font-weight: 600;
+        
+    }
+    .items-p2{
+        margin: 3em 1em -12em 1em;
+        padding: 2em;
+        background-color: #fff;
+        border-radius: 5px;
+        border: dashed 1px #000;
+        font-family: "Poor Story", system-ui;
+        font-size: 1.125rem;
+        text-shadow: 0 0 70px #000;
+        font-weight: 600;
+    }
+    
+    @media(min-width: 320px) and (max-width: 500px){
+        .sectiune-about{
+            padding: 5rem 0 19rem 0;
+            height: 100%;
+        }
+        .flex-p{
+            flex-direction: column;
+        }
+
+        .h2-about-us {
+            font-size: 1.5rem;
+            width: 12rem;
+            height: 3rem;
+            margin-top: -3rem;
+        }
+    
+        .about-btn {
+            font-size: 1.25rem;
+        }
+    
+        .items-p1{
+            margin: 5em 1em 3em 1em;
+            font-size: 0.6rem;
+            padding: 2rem;
+        }
+        .items-p2{
+            margin: 3em 1em -2em 1em;
+            font-size: 0.6rem;
+            padding: 2rem;
+        }
+        .sectiune-about{
+            padding-bottom: 5rem;
+        }
+
+    }
+
+    @media(min-width: 501px) and (max-width: 768px){
+        .h2-about-us {
+            font-size: 2rem;
+            width: 15rem;
+            height: 4rem;
+            margin-top: -9rem;
+            
+        }
+
+        .about-btn {
+            font-size: 1.75rem;
+            margin-bottom: 5rem;
+        }
+
+        .items-p1, .items-p2{
+            font-size: 0.7rem;
+        }
+    }
+
+    @media(min-width: 769px) and (max-width: 1024px){
+        .h2-about-us {
+            font-size: 2.5rem;
+            width: 20rem;
+            height: 5rem;
+            margin-top: -12.5rem;
+        }
+        .about-btn{
+            margin-bottom: 2.5rem;
+        }
+
+        .items-p1, .items-p2{
+            font-size: 0.9rem;
+        }
+    }
+    
+    /*Sfarsit Sectiune-About-Us*/ 
+    
+    /*Sectiune-Servicii*/
+
+    .grid-servicii{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 2rem;
+        background-color: #FEC9BC;
+        
+    }
+    .tours, .hiking, .travel, .booking, .cruise, .transport{
+        width: 100%;
+        background-color: #FEC9BC;
+        position: relative;
+        overflow: hidden;
+        aspect-ratio: 406 / 432; /* Mentine acelasi width si height la atingerea breakpoints-urilor */
+        border-radius: 1.6rem;
+    }
+    
+    .btn-servicii{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-family: "Poor Story", system-ui;
+        font-size: 1.5rem;
+        padding: 0.5em 1em;
+        border-radius: 0.313rem;
+        border: solid 1px;
+        background-color: #fff;
+        text-align: center;
+        text-shadow: 0px 0px 20px #000;
+        cursor: pointer;
+        transition: all .5s ease-in-out;
+    }
+    .btn-servicii:hover{
+        font-size: 1.6rem;
+        filter: drop-shadow(0px 0px 5px #fff);
+    } 
+    .container-servicii {
+        max-width: 1600px;
+        margin: 0 auto;
+        padding: 4rem 2rem;
+    }
+    .grid-servicii img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+
+    /* Tableta: 2 coloane */
+
+    @media (max-width: 991px) {
+        .grid-servicii {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        .btn-servicii{
+            font-size: 1.2rem;
+        }
+        .btn-servicii:hover{
+            font-size: 1.3rem;
+        }
+    }
+
+    /* Mobil: 1 coloana */
+
+    @media (max-width: 576px) {
+        .grid-servicii {
+            grid-template-columns: 1fr;
+        }
+        .btn-servicii{
+            font-size: 1rem;
+        }
+        .btn-servicii:hover{
+            font-size: 1.1rem;
+        }
+    }
+  
+    
+
+    
+    
+    
+    
+    /*Sfarsit Sectiune-Servicii*/
+    
+    /*Sectiune-Reviews*/
+
+    .sectiune-reviews{
+        width: 100%;
+        height: 100vh;
+        background-color: #FEC9BC;
+        /*margin-top: 0.5rem;*/
+    }
+    .casute{
+        margin-top: 4rem;
+        display: flex;
+        justify-content: space-evenly;
+        justify-items: center;
+        
+    }
+    .rev-stanga, .rev-mijloc, .rev-dreapta{
+        width: 310px;
+        height: 294px;
+        border-radius: 5px;
+        background-color: #1D192B;
+        margin-top: 2rem;
+    
+    }
+    .flex-reviews{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    .flex-social{
+       display: flex;
+       flex-direction: row;
+    }
+    .poza-gagica{
+        width: 4rem;
+        margin-top: 0.75em;
+    }
+    .i-facebook{
+        width: 3rem;
+        height: 3rem;
+        margin: 2em;
+    }
+    .i-instagram{
+        width: 3rem;
+        height: 3rem;
+        margin: 2em;
+    }
+    .img-stele{
+        width: 11.25rem;
+        height: 1.75rem;
+        margin: 2em;
+    } 
+
+    .date-option{
+        font-size: 1rem;
+        width: 50%;
+    }
+
+    @media(min-width: 769px) and (max-width: 1024px){
+        
+        .sectiune-reviews{
+            margin: 0rem 0rem;
+            height: 100%;
+            padding-bottom: 2rem;
+        }
+        .h2-reviews{
+            font-size: 2.5rem;
+        }
+        h3{
+            margin: 3rem auto;
+            font-size: 2rem;
+            width: 33rem;
+        }
+        .casute{
+            padding-bottom: 1rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 2rem 0;
+            margin: 0 1rem;
+        }
+    }    
+    
+    @media(max-width:768px){
+
+        h2{
+        font-size: 2rem;
+        }
+        h3{
+            margin: 3rem auto;
+            font-size: 1.8rem;
+            width: 25rem;
+        }
+        .casute{
+        flex-wrap: wrap;
+        margin: 0 1rem 2rem 1rem;
+        gap: 1rem;
+        }
+        .rev-stanga, .rev-mijloc, .rev-dreapta {
+        width: 55%;
+        margin-bottom: 1rem;
+        }
+        .sectiune-reviews{
+            margin: 1rem 0 0 0;
+            height: 100%;
+        }
+    }
+    @media(min-width: 400px) and (max-width: 531px){
+        h2{
+            font-size: 1.5rem;
+        }
+        h3{
+            margin: 3rem auto;
+            font-size: 1.5rem;
+            width: 18rem;
+        }
+        .casute{
+            margin-top: 0;
+            padding-bottom: 1rem;
+        }
+        .poza-gagica{
+            width: 3.5rem;
+        }
+        .i-facebook {
+            width: 2.5rem;
+            height: 2.5rem;
+        }
+        .i-instagram {
+            width: 2.5rem;
+            height: 2.5rem;
+        }
+        .img-stele {
+            width: 9.25rem;
+            height: 1.65rem;
+            margin: 2em;
+        }
+        .sectiune-reviews{
+            margin: 0.5rem 0;
+            height: 100%;
+        }
+    }
+    
+    @media(min-width: 320px) and (max-width: 400px){
+         h2{
+            font-size: 1.5rem;
+         }
+         h3{
+            margin: 3rem auto;
+            font-size: 1.3rem;
+            width: 18rem;
+        }
+        .rev-stanga, .rev-mijloc, .rev-dreapta {
+            width: 80%;
+        }
+        .sectiune-reviews{
+            margin: 0.5rem 0;
+            height: 100%;
+        }
+    }
+
+
+
+
+    /*Sfarsit Sectiune-Reviews*/
+    
+    /* Sectiune-Contact-Us */
+    
+    .sectiune-contact {
+        width: 100%;
+        background-color: #F5C6B4;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        margin-top: -1.5rem;
+        height: 100%;
+        padding-bottom: 3rem;
+    }
+    .h2-contact-us{
+        font-size: 3rem;
+        font-family: "Poor Story", system-ui;
+        text-shadow: 0px -1px 60px #000;
+        text-align: center;
+        margin: 5rem 0;
+    }
+    
+    .casute-contact {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem; 
+       
+    }
+    
+    .contact-stanga {
+        display: flex;
+        flex-direction: column;
+        gap: 6rem; 
+        margin-bottom: 4.5em;
+        margin-right: -4rem;
+    
+    }
+    
+    .contact-item {
+        white-space: nowrap;
+        margin-right: 250px;
+        width: 80px; 
+        object-fit: contain;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+       
+    }
+    .contact-item2{
+        white-space: nowrap;
+        margin-right: 250px;
+        width: 80px; 
+        
+        object-fit: contain;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+       
+    
+    }
+    .contact-item3{
+        white-space: nowrap;
+        margin-right: 250px;
+        width: 80px; 
+       
+        object-fit: contain;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-top: 1em;
+       
+    
+    }
+    .contact-item p, .contact-item2 p, .contact-item3 p{
+        font-family: "Poor Story", system-ui;
+    }
+    
+    .contact-dreapta {
+        background: #1D192B;
+        box-shadow: 4px 4px 30px 0px rgb(255, 255, 255);
+        padding: 2rem 3rem; 
+        border-radius: 12px;
+        min-width: 400px;
+        margin-bottom: 1rem;
+       
+        
+    }
+    
+    .h4-contact {
+        display: block; 
+        color: #fff;
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 2rem; 
+        text-shadow: -1px -1px 0 #000,  1px -1px 0 #000,  -1px  1px 0 #000,  1px  1px 0 #000;
+        font-family: "Poor Story", system-ui;
+    }
+    
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem; 
+    }
+    
+    .form-row1{
+        display: flex;
+        gap: 1.5rem;
+        flex-wrap: wrap;
+    }
+    .form-row2{
+        display: flex;
+        gap: 2rem;
+        flex-wrap: wrap;
+    }
+    input, select {
+        flex-grow: 1;
+        padding: 0.8rem; 
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        font-size: 1rem;
+        height: 50px; 
+        box-sizing: border-box; 
+        font-family: "Poor Story", system-ui;
+        font-size: 1.5rem;
+    }
+    textarea {
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    min-height: 70px; 
+    resize: none;
+    box-sizing: border-box;
+    font-family: "Poor Story", system-ui;
+    }
+    .full-width {
+        width: 100%;
+        height: 50px; 
+    }
+    .contact-btn {
+        background: white;
+        color: black;
+        font-size: 1.2rem;
+        padding: 0.8rem;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: 0.3s;
+        width: 100px; 
+        margin: -0.5rem auto 0; 
+        display: block;
+        font-family: "Poor Story", system-ui;
+    }
+    
+    .contact-btn:hover {
+        background: #F5C6B4;
+    }
+    .custom-dropdown {
+        position: relative;
+        background-color: #fff;
+        font-family: "Poor Story", system-ui;
+        font-size: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        cursor: pointer;
+        width: 100%;
+        height: 50px;
+        padding: 0.8rem;
+        box-sizing: border-box;
+        user-select: none;
+        color: #333;
+    }
+    .dropdown-selected::after {
+      content: "▾";
+      float: right;
+      margin-right: 10px;
+      color: #999;
+      
+    }
+    
+    .dropdown-options {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: #fff;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      margin-top: 4px;
+      z-index: 100;
+      list-style: none;
+      padding: 0;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      max-height: 200px;
+      overflow-y: auto;
+    }
+    .date, .visitors, .destination{
+        font-size: 1.3rem;
+    }
+    
+    .dropdown-options li {
+      padding: 0.8rem;
+      transition: background 0.2s;
+    }
+    
+    .dropdown-options li:hover {
+      background-color: #F5C6B4;
+      color: black;
+      cursor: pointer;
+    }
+    
+    .custom-dropdown.active .dropdown-options {
+      display: block;
+    }
+    @media (min-width: 768px) and (max-width: 1024px) { 
+        .h2-contact-us{
+            font-size: 2.5rem;
+            padding-top: 1rem;
+        }
+        .form-row1 {
+            flex-direction: column; 
+            gap: 1.5rem;
+        }
+        .form-row2 {
+            flex-direction: column; 
+            gap: 1.5rem;
+        }
+        .date, .visitors, .destination{
+            font-size: 1.2rem;
+        }
+        .casute-contact {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem; 
+        margin-top: 2rem;
+       
+    }
+        .contact-stanga{
+            margin-top: 2rem;
+        }
+        
+    }
+    @media (max-width: 768px) { 
+        .h2-contact-us{
+            font-size: 2rem;
+            padding-top: 0rem;
+        }
+        .form-row1 {
+            flex-direction: column; 
+            gap: 1.5rem;
+        }
+        .form-row2 {
+            flex-direction: column; 
+            gap: 1.5rem;
+        }
+        .date, .visitors, .destination{
+            font-size: 1rem;
+        }
+    
+        
+    }
+    
+    
+    
+    @media(min-width: 320px) and (max-width: 500px){
+        .contact-item p,
+        .contact-item2 p,
+        .contact-item3 p {
+            font-size: 1rem; 
+            padding-left: 4rem;
+        }
+        .h2-contact-us{
+            font-size: 1.5rem;
+        }
+    }
+    
+    
+    
+    
+   
+    
+    @media (max-width: 768px) { /* Pentru tableta si tel */
+        .form-row1 {
+            flex-direction: column; /* sa cada vertical */
+            gap: 1.5rem;
+        }
+        .form-row2 {
+            flex-direction: column; /* sa cada vertical */
+            gap: 1.5rem;
+        }
+    
+        .contact-item, .contact-item2, .contact-item3{
+            gap: 4rem;
+        }
+    
+        .casute-contact {
+            flex-direction: column;
+            align-items: center; 
+        }
+    
+        .contact-stanga {
+            order: 2; 
+            margin-top: 4rem;
+            
+        }
+    
+        .contact-dreapta {
+            order: 1;
+        }
+        .h2-contact-us{
+            font-size: 2.5rem;
+        }
+        .h4-contact{
+            font-size: 1.75rem;
+        }
+        input, select{
+            font-size: 1rem;
+        }
+        .contact-btn{
+            font-size: 1rem;
+        }
+
+    }
+    
+    @media(min-width: 400px) and (max-width: 500px) {
+
+        .h2-contact-us{
+            font-size: 1.5rem;
+        }
+        .h4-contact{
+            font-size: 1.5rem;
+        }
+        .contact-btn {
+            width: 90px; 
+        }
+
+        .contact-dreapta {
+            padding: 2rem 3rem; 
+            border-radius: 12px;
+            min-width: 360px;
+            margin-bottom: 1rem;
+
+        }
+
+        .contact-item,
+        .contact-item2,
+        .contact-item3 {
+            margin-left: 0px; 
+            width: 60px; 
+            height: 60px;
+        }
+
+        
+
+    }
+
+    @media(min-width:320px) and (max-width: 400px){
+        .h2-contact-us{
+            font-size: 1.5rem;
+        }
+        .h4-contact{
+            font-size: 1.25rem;
+        }
+        .contact-btn {
+            width: 75px; 
+        }
+        .contact-dreapta {
+            padding: 2rem 3rem; 
+            border-radius: 12px;
+            min-width: 270px;
+            margin-bottom: 1rem;
+            margin: 0 auto;
+            max-width: 290px;
+
+        }
+        .contact-item,
+        .contact-item2,
+        .contact-item3 {
+            margin-left: -2.5rem;
+            width: 48px; 
+            height: 48px;
+            gap: 2rem;
+        }
+        
+    }
+    @media (min-width: 1921px){
+        .casute-contact {
+            gap: 18rem;
+        }
+
+    }
+
+    /*Sfarsit Sectiune-Contact*/
+
+    /* Footer */
+
+    footer{
+        width: 100%;
+        height: 100%;
+        background-color: #1D192B;
+        padding-bottom: 1.5rem;
+        }
+    .icoane-social{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 3rem 1em 1em 1em;
+        gap: 1.7em;
+        }
+   
+    #youtube{
+        height: 3.2rem;
+        width: 3.2rem;
+    }
+  
+    .icoane-social img {
+        width: 2.5rem; 
+        height: auto;
+        }
+    .icoane-social img:hover{
+        filter: drop-shadow(2px 2px 6px rgba(255, 255, 255, 50%));
+        cursor: pointer;
+    }
+    .linie {
+        width: 20em; 
+        height: 2px;
+        background-color: #fff; 
+        }
+    .sprint-team{
+        color: #fff;
+        font-family: "Poor Story", system-ui;
+        font-size: 2rem;
+        margin: 0.2em;
+        }
+    .sprint-team a{
+            color: #fff;
+        }
+    .logo-footer{
+            width: 6rem;
+        }
+      
+    .linkuri{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-top: 2.5em;
+        }
+    .linkuri a{
+        color: #fff;
+        font-family: "Poor Story", system-ui;
+        text-decoration: underline;
+        font-size: 32px;
+        margin-top: 1rem;
+    }
+    .linkuri a:hover{
+        filter: drop-shadow(2px 2px 6px rgba(255, 255, 255, 50%));
+    }
+
+
+    @media(max-width:768px){
+        .linkuri a{
+            font-size: 1.5rem;
+        }
+        .linkuri a:hover{
+        filter: drop-shadow(2px 2px 6px rgba(255, 255, 255, 50%));
+    }
+        .icoane-social img:hover{
+        filter: drop-shadow(2px 2px 6px rgba(255, 255, 255, 50%));
+        cursor: pointer;
+    }
+    }
+
+    @media(min-width: 475px) and (max-width: 600px) {
+        .logo-footer{
+            width: 5rem;
+        }
+        .sprint-team{
+            font-size: 1rem;
+        }
+        .linkuri a{
+            font-size: 18px;
+        }
+        #facebook, #instagram, #youtube, #linkedin, #twitter{
+            width: 1.5rem;
+        }
+        .icoane-social img:hover{
+            filter: drop-shadow(2px 2px 6px rgba(255, 255, 255, 50%));
+            cursor: pointer;
+        }
+        .linkuri a:hover{
+            filter: drop-shadow(2px 2px 6px rgba(255, 255, 255, 50%));
+        } 
+    }
+        @media(min-width:320px) and (max-width: 475px){
+            #facebook, #instagram, #youtube, #linkedin, #twitter{
+                width: 1rem;
+            }
+            .icoane-social img:hover{
+                filter: drop-shadow(2px 2px 6px rgba(255, 255, 255, 50%));
+                cursor: pointer;
+            }
+            .sprint-team{
+                font-size: 0.75rem;
+            }
+            .logo-footer{
+                width: 4rem;
+            }
+            .linkuri{
+                flex-direction: column;
+                gap: 1rem;
+            }
+            .linkuri a{
+                font-size: 1rem;
+            }
+            .linkuri a:hover{
+                filter: drop-shadow(2px 2px 6px rgba(255, 255, 255, 50%));
+            }
+            }
+         
+        /*Sfarsit-Footer*/
+
+@media(min-width:1441px){
+        body{
+            transform: scale(1.2);
+            transform-origin: top left;
+            width: calc(100% / 1.2);
+        }
+    }
+        @media(min-width:1900px){
+        body{
+            transform: scale(1.5);
+            transform-origin: top left;
+            width: calc(100% / 1.5);
+        }
+    }
+            @media(min-width:2100px){
+        body{
+            transform: scale(2);
+            transform-origin: top left;
+            width: calc(100% / 2);
+        }
+    }
+                @media(min-width:2800px){
+        body{
+            transform: scale(2.5);
+            transform-origin: top left;
+            width: calc(100% / 2.5);
+        }
+    }
+                @media(min-width:3500px){
+        body{
+            transform: scale(3);
+            transform-origin: top left;
+            width: calc(100% / 3);
+        }
+    }
